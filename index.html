@@ -112,6 +112,30 @@
         
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .marquee-container { display: flex; width: 200%; animation: marquee 25s linear infinite; }
+
+        /* Testimonial Marquee */
+        .testimonial-container { overflow: hidden; position: relative; width: 100%; padding: 40px 0; }
+        .testimonial-track { display: flex; gap: 2rem; width: max-content; animation: testimonialMarquee 40s linear infinite; }
+        .testimonial-track:hover { animation-play-state: paused; }
+        
+        @keyframes testimonialMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 1rem)); }
+        }
+
+        .testimonial-card {
+            width: 350px;
+            flex-shrink: 0;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+        
+        .testimonial-card:hover, .testimonial-card:active {
+            transform: translateY(-15px) scale(1.05) !important;
+            box-shadow: 0 30px 60px -12px rgba(0, 115, 230, 0.25);
+            background: white;
+            border-color: #0073e6;
+        }
     </style>
 </head>
 <body class="text-slate-600 antialiased font-sans">
@@ -307,27 +331,69 @@
             </section>
 
             <!-- Testimonials -->
-            <section id="testimonials" class="py-24 md:py-32 relative z-10">
+            <section id="testimonials" class="py-24 md:py-32 relative z-10 overflow-hidden">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-                        <h2 class="text-sm font-bold tracking-[0.2em] text-brand-600 uppercase mb-4">Success Stories</h2>
-                        <h3 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Hear From Our <span class="font-serif italic text-brand-600">Alumni</span></h3>
+                        <h2 class="text-sm font-bold tracking-[0.2em] text-brand-600 uppercase mb-4">What Our Students Say</h2>
+                        <h3 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Student Testimonials</h3>
+                        <p class="text-slate-500">Join thousands of successful students who achieved their dreams with Langfort.</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] reveal-up stagger-1">
+                </div>
+
+                <div class="testimonial-container">
+                    <div class="testimonial-track">
+                        <!-- Card 1 -->
+                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] testimonial-card border border-slate-100">
                             <div class="flex text-brand-500 mb-6 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"The IELTS coaching was exceptional. Helped me score an 8.0 band overall."</p>
-                            <div class="flex items-center gap-4"><div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">M</div><div><h4 class="font-bold text-slate-900">Meera Nair</h4><span class="text-sm text-slate-500">Studying in UK</span></div></div>
+                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"Langfort transformed my OET preparation. The trainers were incredibly supportive and the mock tests were exactly like the real exam. Got my desired score on the first attempt!"</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold">AM</div>
+                                <div><h4 class="font-bold text-slate-900">Aiswarya Menon</h4><span class="text-sm text-slate-500">OET Student — Nurse</span></div>
+                            </div>
                         </div>
-                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] reveal-up stagger-2">
+                        <!-- Card 2 -->
+                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] testimonial-card border border-slate-100">
                             <div class="flex text-brand-500 mb-6 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"Seamless Ausbildung guidance. Visa and language classes were perfect."</p>
-                            <div class="flex items-center gap-4"><div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">A</div><div><h4 class="font-bold text-slate-900">Ashwin Kumar</h4><span class="text-sm text-slate-500">Working in Germany</span></div></div>
+                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"The IELTS coaching was exceptional. Personalized feedback and intensive mock tests helped me achieve an 8.0 band. Highly recommended!"</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold">RK</div>
+                                <div><h4 class="font-bold text-slate-900">Rahul Krishnan</h4><span class="text-sm text-slate-500">IELTS Student — Engineer</span></div>
+                            </div>
                         </div>
-                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] reveal-up stagger-3">
+                        <!-- Card 3 -->
+                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] testimonial-card border border-slate-100">
                             <div class="flex text-brand-500 mb-6 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"Cleared OET first attempt. Expert trainers at Langfort Academy are the best."</p>
-                            <div class="flex items-center gap-4"><div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">R</div><div><h4 class="font-bold text-slate-900">Rijo Joseph</h4><span class="text-sm text-slate-500">Nurse in Australia</span></div></div>
+                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"Best place for German language classes in Kalady. The B2 coaching was very professional and helped me secure my visa effortlessly."</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold">SR</div>
+                                <div><h4 class="font-bold text-slate-900">Sneha Rajan</h4><span class="text-sm text-slate-500">German Student</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Cards for Seamless Loop -->
+                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] testimonial-card border border-slate-100">
+                            <div class="flex text-brand-500 mb-6 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"Langfort transformed my OET preparation. The trainers were incredibly supportive and the mock tests were exactly like the real exam."</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold">AM</div>
+                                <div><h4 class="font-bold text-slate-900">Aiswarya Menon</h4><span class="text-sm text-slate-500">OET Student — Nurse</span></div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] testimonial-card border border-slate-100">
+                            <div class="flex text-brand-500 mb-6 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"The IELTS coaching was exceptional. Personalized feedback and intensive mock tests helped me achieve an 8.0 band. Highly recommended!"</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold">RK</div>
+                                <div><h4 class="font-bold text-slate-900">Rahul Krishnan</h4><span class="text-sm text-slate-500">IELTS Student — Engineer</span></div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-8 md:p-10 rounded-[2.5rem] testimonial-card border border-slate-100">
+                            <div class="flex text-brand-500 mb-6 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-slate-700 mb-8 italic font-serif text-lg leading-relaxed">"Best place for German language classes in Kalady. The B2 coaching was very professional and helped me secure my visa effortlessly."</p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold">SR</div>
+                                <div><h4 class="font-bold text-slate-900">Sneha Rajan</h4><span class="text-sm text-slate-500">German Student</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
