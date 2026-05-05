@@ -151,30 +151,18 @@
         .hero-cloud-bg {
             background-color: #f8fafc;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(186, 230, 253, 0.4) 0px, transparent 70%), 
-                radial-gradient(at 100% 0%, rgba(219, 234, 254, 0.5) 0px, transparent 70%), 
-                radial-gradient(at 50% 100%, rgba(255, 255, 255, 1) 0px, transparent 80%),
-                radial-gradient(at 10% 50%, rgba(186, 230, 253, 0.3) 0px, transparent 60%);
+                radial-gradient(at 0% 0%, #dbeafe 0px, transparent 70%), 
+                radial-gradient(at 100% 0%, #bae6fd 0px, transparent 70%), 
+                radial-gradient(at 50% 100%, #ffffff 0px, transparent 80%);
             position: relative;
             overflow: hidden;
-            z-index: 10;
-        }
-
-        .grid-pattern {
-            position: absolute;
-            inset: 0;
-            background-image: 
-                linear-gradient(rgba(0, 115, 230, 0.12) 1.5px, transparent 1.5px), 
-                linear-gradient(90deg, rgba(0, 115, 230, 0.12) 1.5px, transparent 1.5px);
-            background-size: 100px 100px;
-            pointer-events: none;
-            z-index: 1;
+            z-index: 5;
         }
 
         .texture-overlay {
             position: absolute;
             inset: 0;
-            opacity: 0.08;
+            opacity: 0.05;
             pointer-events: none;
             z-index: 2;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -246,15 +234,13 @@
 
         <main>
             <!-- Hero -->
-            <section id="home" class="relative min-h-screen flex items-center pt-32 pb-20 hero-cloud-bg shadow-inner">
-                <div class="grid-pattern"></div>
+            <section id="home" class="relative min-h-screen flex items-center pt-32 pb-20 hero-cloud-bg">
                 <div class="texture-overlay"></div>
                 
                 <!-- Cloud Decorative Elements -->
-                <div class="cloud-soft w-[70vw] h-[70vw] bg-sky-200/40 top-[-25%] left-[-15%]"></div>
-                <div class="cloud-soft w-[60vw] h-[60vw] bg-brand-200/50 bottom-[-15%] right-[-10%]" style="animation-delay: -5s"></div>
-                <div class="cloud-soft w-[40vw] h-[40vw] bg-white top-[15%] right-[5%]" style="animation-delay: -10s"></div>
-                <div class="cloud-soft w-[45vw] h-[45vw] bg-sky-100/60 top-[40%] left-[20%]" style="animation-delay: -15s"></div>
+                <div class="cloud-soft w-[60vw] h-[60vw] bg-brand-100/40 top-[-20%] left-[-10%]"></div>
+                <div class="cloud-soft w-[50vw] h-[50vw] bg-sky-100/50 bottom-[-10%] right-[-5%]" style="animation-delay: -5s"></div>
+                <div class="cloud-soft w-[40vw] h-[40vw] bg-white top-[15%] right-[10%]" style="animation-delay: -10s"></div>
 
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
