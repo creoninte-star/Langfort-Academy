@@ -146,6 +146,17 @@
             background: white;
             border-color: #0073e6;
         }
+
+        .video-container { 
+            overflow-x: auto; 
+            white-space: nowrap; 
+            cursor: grab;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: auto;
+        }
+        .video-container::-webkit-scrollbar { display: none; }
+        .video-container:active { cursor: grabbing; }
     </style>
 </head>
 <body class="text-slate-600 antialiased font-sans">
@@ -304,6 +315,192 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Orientation Class -->
+            <section id="orientation" class="py-24 md:py-32 relative z-10 overflow-hidden bg-slate-50/50">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="text-center md:text-left mb-16 reveal-up">
+                        <h2 class="text-sm font-bold tracking-[0.2em] text-brand-600 uppercase mb-4">Expert Content</h2>
+                        <h3 class="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">Orientation <span class="font-serif italic text-brand-600">Class</span></h3>
+                        <p class="text-slate-500 mt-6 max-w-2xl">Learn from our expert trainers with curated video lessons covering every aspect of your exam preparation.</p>
+                    </div>
+                </div>
+
+                <div class="video-container" id="orientation-slider">
+                    <div class="video-track inline-flex gap-8 px-4 md:px-8">
+                        <!-- Video 1 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/NKjjLO4PxZk/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">OET Orientation</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">OET Listening & Reading | Expert Strategies</h4>
+                                <a href="https://youtu.be/NKjjLO4PxZk" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 2 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/RJbl6trjMrg/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">IELTS Guide</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">IELTS Success Path | From Basics to Band 8+</h4>
+                                <a href="https://youtu.be/RJbl6trjMrg" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 3 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/MWtNDAcKPTA/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">Study Abroad</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">Your Gateway to Germany | Nursing & Careers</h4>
+                                <a href="https://youtu.be/MWtNDAcKPTA" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 4 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/Fgm3ujnBIy0/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">PTE Prep</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">PTE Academic Masterclass | Score Higher Faster</h4>
+                                <a href="https://youtu.be/Fgm3ujnBIy0" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 5 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/ZqwtGaAXUcY/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">German A1-B2</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">German Language Essentials | Live Orientation</h4>
+                                <a href="https://youtu.be/ZqwtGaAXUcY" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Cards for Seamless Loop -->
+                        <!-- Video 1 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/NKjjLO4PxZk/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">OET Orientation</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">OET Listening & Reading | Expert Strategies</h4>
+                                <a href="https://youtu.be/NKjjLO4PxZk" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 2 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/RJbl6trjMrg/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">IELTS Guide</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">IELTS Success Path | From Basics to Band 8+</h4>
+                                <a href="https://youtu.be/RJbl6trjMrg" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 3 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/MWtNDAcKPTA/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">Study Abroad</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">Your Gateway to Germany | Nursing & Careers</h4>
+                                <a href="https://youtu.be/MWtNDAcKPTA" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 4 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/Fgm3ujnBIy0/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">PTE Prep</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">PTE Academic Masterclass | Score Higher Faster</h4>
+                                <a href="https://youtu.be/Fgm3ujnBIy0" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                        <!-- Video 5 -->
+                        <div class="glass-card w-[320px] md:w-[400px] rounded-[2rem] overflow-hidden group course-card whitespace-normal shrink-0 transition-all duration-500">
+                            <div class="relative aspect-video overflow-hidden">
+                                <img src="https://img.youtube.com/vi/ZqwtGaAXUcY/maxresdefault.jpg" alt="Orientation Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-16 h-16 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-brand-600 shadow-xl scale-90 group-hover:scale-100 transition-transform">
+                                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-widest mb-4">German A1-B2</div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-6 group-hover:text-brand-600 transition-colors">German Language Essentials | Live Orientation</h4>
+                                <a href="https://youtu.be/ZqwtGaAXUcY" target="_blank" class="flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-4 transition-all">Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -583,68 +780,69 @@
                 window.open(whatsappUrl, '_blank');
             });
 
-            // Improved Testimonial Slider Logic
-            const slider = document.querySelector('.testimonial-container');
-            const track = document.querySelector('.testimonial-track');
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-            let isInteracting = false;
-            let scrollSpeed = 0.8;
+            // Improved Slider Factory
+            function initSlider(containerSelector) {
+                const slider = document.querySelector(containerSelector);
+                if (!slider) return;
+                
+                const track = slider.querySelector(':first-child');
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+                let isInteracting = false;
+                let scrollSpeed = 0.8;
 
-            // Auto Scroll Function
-            function step() {
-                if (!isInteracting && !isDown) {
-                    slider.scrollLeft += scrollSpeed;
-                    // Loop back to start seamlessly
+                function step() {
+                    if (!isInteracting && !isDown) {
+                        slider.scrollLeft += scrollSpeed;
+                        if (slider.scrollLeft >= track.scrollWidth / 2) {
+                            slider.scrollLeft = 0;
+                        }
+                    }
+                    requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+
+                slider.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    isInteracting = true;
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
+
+                slider.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    isInteracting = false;
+                });
+
+                slider.addEventListener('mouseup', () => {
+                    isDown = false;
+                    isInteracting = false;
+                });
+
+                slider.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 2;
+                    slider.scrollLeft = scrollLeft - walk;
+                });
+
+                slider.addEventListener('touchstart', () => isInteracting = true);
+                slider.addEventListener('touchend', () => {
+                    isInteracting = false;
                     if (slider.scrollLeft >= track.scrollWidth / 2) {
                         slider.scrollLeft = 0;
                     }
-                }
-                requestAnimationFrame(step);
+                });
+
+                slider.addEventListener('mouseenter', () => isInteracting = true);
+                slider.addEventListener('mouseleave', () => isInteracting = false);
             }
-            requestAnimationFrame(step);
 
-            // Interaction Listeners
-            slider.addEventListener('mousedown', (e) => {
-                isDown = true;
-                isInteracting = true;
-                slider.classList.add('active');
-                startX = e.pageX - slider.offsetLeft;
-                scrollLeft = slider.scrollLeft;
-            });
-
-            slider.addEventListener('mouseleave', () => {
-                isDown = false;
-                isInteracting = false;
-            });
-
-            slider.addEventListener('mouseup', () => {
-                isDown = false;
-                isInteracting = false;
-            });
-
-            slider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - slider.offsetLeft;
-                const walk = (x - startX) * 2;
-                slider.scrollLeft = scrollLeft - walk;
-            });
-
-            // Touch support for pausing
-            slider.addEventListener('touchstart', () => isInteracting = true);
-            slider.addEventListener('touchend', () => {
-                isInteracting = false;
-                // Handle loop on touch scroll too
-                if (slider.scrollLeft >= track.scrollWidth / 2) {
-                    slider.scrollLeft = 0;
-                }
-            });
-
-            // Desktop Hover Pause
-            slider.addEventListener('mouseenter', () => isInteracting = true);
-            slider.addEventListener('mouseleave', () => isInteracting = false);
+            // Initialize Sliders
+            initSlider('.testimonial-container');
+            initSlider('#orientation-slider');
         });
     </script>
 </body>
