@@ -113,25 +113,35 @@
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .marquee-container { display: flex; width: 200%; animation: marquee 25s linear infinite; }
 
-        /* Testimonial Marquee */
-        .testimonial-container { overflow: hidden; position: relative; width: 100%; padding: 40px 0; }
-        .testimonial-track { display: flex; gap: 2rem; width: max-content; animation: testimonialMarquee 40s linear infinite; }
-        .testimonial-track:hover { animation-play-state: paused; }
-        
-        @keyframes testimonialMarquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-50% - 1rem)); }
+        /* Testimonial Slider */
+        .testimonial-container { 
+            overflow-x: auto; 
+            white-space: nowrap; 
+            cursor: grab;
+            padding: 40px 0;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            scroll-behavior: auto;
+        }
+        .testimonial-container::-webkit-scrollbar { display: none; }
+        .testimonial-container:active { cursor: grabbing; }
+
+        .testimonial-track { 
+            display: inline-flex; 
+            gap: 2rem; 
+            padding: 0 1rem;
         }
 
         .testimonial-card {
             width: 350px;
+            white-space: normal;
             flex-shrink: 0;
             transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            cursor: pointer;
+            user-select: none;
         }
         
         .testimonial-card:hover, .testimonial-card:active {
-            transform: translateY(-15px) scale(1.05) !important;
+            transform: translateY(-15px) scale(1.05);
             box-shadow: 0 30px 60px -12px rgba(0, 115, 230, 0.25);
             background: white;
             border-color: #0073e6;
@@ -557,6 +567,69 @@
                 
                 window.open(whatsappUrl, '_blank');
             });
+
+            // Improved Testimonial Slider Logic
+            const slider = document.querySelector('.testimonial-container');
+            const track = document.querySelector('.testimonial-track');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            let isInteracting = false;
+            let scrollSpeed = 0.8;
+
+            // Auto Scroll Function
+            function step() {
+                if (!isInteracting && !isDown) {
+                    slider.scrollLeft += scrollSpeed;
+                    // Loop back to start seamlessly
+                    if (slider.scrollLeft >= track.scrollWidth / 2) {
+                        slider.scrollLeft = 0;
+                    }
+                }
+                requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+
+            // Interaction Listeners
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                isInteracting = true;
+                slider.classList.add('active');
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                isInteracting = false;
+            });
+
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                isInteracting = false;
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 2;
+                slider.scrollLeft = scrollLeft - walk;
+            });
+
+            // Touch support for pausing
+            slider.addEventListener('touchstart', () => isInteracting = true);
+            slider.addEventListener('touchend', () => {
+                isInteracting = false;
+                // Handle loop on touch scroll too
+                if (slider.scrollLeft >= track.scrollWidth / 2) {
+                    slider.scrollLeft = 0;
+                }
+            });
+
+            // Desktop Hover Pause
+            slider.addEventListener('mouseenter', () => isInteracting = true);
+            slider.addEventListener('mouseleave', () => isInteracting = false);
         });
     </script>
 </body>
