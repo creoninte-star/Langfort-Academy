@@ -1,0 +1,6 @@
+.gemini
+node_modules
+.agent
+.planning
+*.log
+.env
